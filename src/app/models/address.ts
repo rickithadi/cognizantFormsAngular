@@ -1,14 +1,14 @@
-import { AbstractControl } from "@angular/forms";
 import { disable, prop, required } from "@rxweb/reactive-form-validators";
 export class Address {
 
   @required()
   areaName: string  ;
-/*  @required()*/
-  /*cityName: string| null = null;*/
 
-  /*@required()*/
-  /*countryName: string|null = null;*/
+  @required()
+  cityName: string;
+
+  @required()
+  countryName: string;
 
 
 

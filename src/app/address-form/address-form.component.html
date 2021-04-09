@@ -1,24 +1,12 @@
 <form [formGroup]="addressForm">
-    {{addressForm.value|json}}
-    <ul>
+    <h5>Area Name</h5>
+    <input type="text" pInputText formControlName="areaName" />
+    <small class="form-text text-danger" *ngIf="addressForm.controls.areaName.errors">{{addressForm.controls.areaName.errors.required.message}}<br /></small>
 
-        <li>
-            <h5>Area Name</h5>
-            <input type="text" pInputText formControlName="areaName">
-
-            <small class="form-text text-danger" *ngIf="addressForm.controls.areaName.errors">{{addressForm.controls.areaName.errors.required.message}}<br /></small>
-
-        </li>
-        <li>
-            <h5>City Name</h5>
-            <input type="text" pInputText formControlName="cityName">
-        </li>
-        <li>
-            <h5>Country Name</h5>
-            <input type="text" pInputText formControlName="countryName">
-
-        </li>
-
-
-    </ul>
+    <h5>City Name</h5>
+    <input type="text" pInputText formControlName="cityName" />
+    <small class="form-text text-danger" *ngIf="addressForm.controls.cityName.errors">{{addressForm.controls.cityName.errors.required.message}}<br /></small>
+    <h5>Country Name</h5>
+    <input type="text" pInputText formControlName="countryName" />
+    <small class="form-text text-danger" *ngIf="addressForm.controls.countryName.errors">{{addressForm.controls.countryName.errors.required.message}}<br /></small>
 </form>
