@@ -8,7 +8,8 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./address-form.component.css']
 })
 export class AddressFormComponent implements OnInit {
-  @Input() addressForm?: FormGroup;
+  // TODO passsed address controls dont fit formgroup type
+  @Input() addressForm: any;
 
   constructor() { }
 

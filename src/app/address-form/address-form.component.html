@@ -6,6 +6,7 @@
             <h5>Area Name</h5>
             <input type="text" pInputText formControlName="areaName">
 
+            <small class="form-text text-danger" *ngIf="addressForm.controls.areaName.errors">{{addressForm.controls.areaName.errors.required.message}}<br /></small>
 
         </li>
         <li>

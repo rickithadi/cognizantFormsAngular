@@ -9,17 +9,18 @@ import { Hobby } from './hobby';
 
 import { Type } from 'class-transformer';
 export class User {
+
   @required()
   @alpha()
-  fullName: string|null =null;
+  fullName: string
 
-  @propObject()
+  @propObject(Address)
   @Type(() => Address)
-  address: Address|null = null;
+  address: Address
 
   @propArray()
   @Type(() => Hobby)
-  hobbies: Array<Hobby>|null = null;
+  hobbies: Array<Hobby>
 
     public constructor(init?: Partial<User>) {
     Object.assign(this, init);
