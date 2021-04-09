@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./address-form.component.css']
 })
 export class AddressFormComponent implements OnInit {
-  @Input() addressForm: FormGroup;
+  @Input() addressForm?: FormGroup;
 
   constructor() { }
 

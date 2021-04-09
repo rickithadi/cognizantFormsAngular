@@ -13,9 +13,11 @@ export class User {
   @alpha()
   fullName: string|null =null
 
+  @propObject()
   @required()
   address: Address|null = null;
 
+  @propArray()
   @required()
   hobbies: Array<Hobby>|null = null;
 

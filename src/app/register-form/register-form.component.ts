@@ -12,14 +12,14 @@ import {User} from '../models/user'
   styleUrls: ['./register-form.component.css']
 })
 export class RegisterFormComponent implements OnInit {
-      user = plainToClass(User, userJson);
-
+user:User
   userForm:RxFormGroup
 
 
   constructor(
     private formBuilder: RxFormBuilder) { 
       
+     this.user = plainToClass(User, userJson);
   this.userForm = this.formBuilder.formGroup(this.user) as RxFormGroup;
     }
 
