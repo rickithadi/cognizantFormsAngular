@@ -9,7 +9,7 @@ import { AbstractControl } from "@angular/forms";
   styleUrls: ['./address-form.component.css']
 })
 export class AddressFormComponent implements OnInit {
-  // TODO passsed address controls dont fit formgroup type
+  // TODO address controls dont fit formgroup type, possibly extend with custom interface?
   // https://github.com/angular/angular-cli/issues/6099
   @Input() addressForm: any;
 
