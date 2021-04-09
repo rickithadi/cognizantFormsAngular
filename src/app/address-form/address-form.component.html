@@ -1,12 +1,22 @@
-<form [formGroup]="addressForm">
-    <h5>Area Name</h5>
-    <input type="text" pInputText formControlName="areaName" />
-    <small class="form-text text-danger" *ngIf="addressForm.controls.areaName.errors">{{addressForm.controls.areaName.errors.required.message}}<br /></small>
+<form [formGroup]="addressForm" class='form-inline'>
+    <div class="input-group mb-2 mr-sm-2">
 
-    <h5>City Name</h5>
-    <input type="text" pInputText formControlName="cityName" />
-    <small class="form-text text-danger" *ngIf="addressForm.controls.cityName.errors">{{addressForm.controls.cityName.errors.required.message}}<br /></small>
-    <h5>Country Name</h5>
-    <input type="text" pInputText formControlName="countryName" />
-    <small class="form-text text-danger" *ngIf="addressForm.controls.countryName.errors">{{addressForm.controls.countryName.errors.required.message}}<br /></small>
+        <label>Area: </label>
+        <input type="text" class="form-control" formControlName="areaName" />
+        <small class="form-text text-danger" *ngIf="addressForm.controls.areaName.errors">{{addressForm.controls.areaName.errors.required.message}}<br /></small>
+
+    </div>
+    <div class="input-group mb-2 mr-sm-2">
+        <label>City: </label>
+        <input type="text" class="form-control" formControlName="cityName" />
+        <small class="form-text text-danger" *ngIf="addressForm.controls.cityName.errors">{{addressForm.controls.cityName.errors.required.message}}<br /></small>
+
+    </div>
+    <div class="input-group mb-2 mr-sm-2">
+        <label>Country: </label>
+        <input type="text" class="form-control" formControlName="countryName" />
+        <small class="form-text text-danger" *ngIf="addressForm.controls.countryName.errors">{{addressForm.controls.countryName.errors.required.message}}<br /></small>
+
+    </div>
+
 </form>
