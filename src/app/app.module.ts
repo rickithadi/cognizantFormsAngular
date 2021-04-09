@@ -5,9 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- #1 imp
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 import { AppComponent } from './app.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RegisterFormComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
