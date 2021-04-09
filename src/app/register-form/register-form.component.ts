@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { plainToClass } from 'class-transformer';
+import {UserRepoService} from '../user-repo.service'
 
-import { AbstractControl, FormControl } from '@angular/forms';
 
 import { RxFormBuilder, RxFormGroup } from '@rxweb/reactive-form-validators';
 import { userJson } from '../../assets/user-data';
@@ -16,7 +16,7 @@ export class RegisterFormComponent implements OnInit {
   user: User;
   userForm: RxFormGroup;
 
-  constructor(private formBuilder: RxFormBuilder) {
+  constructor(private formBuilder: RxFormBuilder,private repo:UserRepoService) {
     this.user = plainToClass(User, userJson);
     this.userForm = this.formBuilder.formGroup(this.user) as RxFormGroup;
   }
@@ -30,6 +30,7 @@ export class RegisterFormComponent implements OnInit {
     this.userForm = this.formBuilder.formGroup(this.user) as RxFormGroup;
   }
   submitForm():void{
-    console.log(this.userForm.value)
+    /*console.log(this.userForm.value)*/
+    this.repo.addUser(this.userForm.value)
   }
 }
