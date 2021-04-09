@@ -24,6 +24,7 @@ export class RegisterFormComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    console.log(this.userForm.controls)
   }
 
 }

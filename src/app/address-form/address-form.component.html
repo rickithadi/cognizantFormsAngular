@@ -1,1 +1,22 @@
-<p>address-form works!</p>
+<form [formGroup]="addressForm">
+    <ul>
+
+        <li>
+            <h5>Area Name</h5>
+            <input type="text" pInputText formControlName="areaName">
+
+
+        </li>
+        <li>
+            <h5>City Name</h5>
+            <input type="text" pInputText formControlName="cityName">
+        </li>
+        <li>
+            <h5>Country Name</h5>
+            <input type="text" pInputText formControlName="countryName">
+
+        </li>
+
+
+    </ul>
+</form>
