@@ -2,11 +2,11 @@ import { AbstractControl } from "@angular/forms";
 import { disable, prop, required } from "@rxweb/reactive-form-validators";
 export class Address {
   @required()
-  areaName: string = null;
+  areaName: string |null= null;
   @required()
-  cityName: string = null;
+  cityName: string |null= null;
   @required()
-  countryName: string = null;
+  countryName: string |null= null;
 
 
 

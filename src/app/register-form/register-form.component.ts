@@ -19,7 +19,6 @@ export class RegisterFormComponent implements OnInit {
 
   constructor(
     private formBuilder: RxFormBuilder) { 
-
   this.userForm = this.formBuilder.formGroup(this.user) as RxFormGroup;
       
     }

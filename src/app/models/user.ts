@@ -2,6 +2,7 @@ import {
   propArray,
   propObject,
   required,
+  alpha,
   disable,
   prop,
 } from '@rxweb/reactive-form-validators';
@@ -9,13 +10,14 @@ import { Address } from './address';
 import { Hobby } from './hobby';
 export class User {
   @required()
-  fullName: string =null 
+  @alpha()
+  fullName: string|null =null
 
   @required()
-  address: Adress = null;
+  address: Address|null = null;
 
   @required()
-  hobbies: Array<Hobby> = null;
+  hobbies: Array<Hobby>|null = null;
 
     public constructor(init?: Partial<User>) {
     Object.assign(this, init);

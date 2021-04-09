@@ -1,2 +1,16 @@
 <p>register-form works!</p>
-{{user|json}}
+<form [formGroup]="userForm" novalidate>
+
+    <h5>Name:</h5>
+    <input type="text" pInputText formControlName="fullName">
+    <small class="form-text text-danger" *ngIf="userForm.controls.fullName.errors">{{userForm.controls.fullName.errors.required.message}}<br /></small>
+
+
+    <h5>Address:</h5>
+
+
+    <!--<app-address [addressForm]="userForm.controls['address']"></app-address>-->
+
+    <!--<app-products [userForm]="userForm" (updateProducts)="udpateProducts()"></app-products>-->
+
+</form>
