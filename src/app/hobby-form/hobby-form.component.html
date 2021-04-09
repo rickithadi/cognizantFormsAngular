@@ -1,1 +1,15 @@
-<p>hobby-form works!</p>
+<form [formGroup]="userForm">
+    <button class='btn btn-primary' (click)="addHobby()"> Add Hobby </button>
+    <!--<table [value]="userForm.controls.hobbies">-->
+    <!--<input type=" text" formControlName="name" />-->
+    <!--</table>-->
+
+    <!--<button [disabled]="!userForm.valid" class="btn btn-primary" (click)="submitForm()">Submit</button>-->
+    <!--</div>-->
+
+    <!--<div formArrayName="hobbies">-->
+    <ul *ngFor="let hobby of hobbies.controls ; index as i">
+        <li>{{hobby.value.name}}<button class='btn btn-danger'> remove</button></li>
+    </ul>
+    <!--</div>-->
+</form>

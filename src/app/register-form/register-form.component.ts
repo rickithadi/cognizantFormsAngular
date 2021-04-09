@@ -25,4 +25,8 @@ export class RegisterFormComponent implements OnInit {
     console.log(this.userForm.controls);
   }
 
+  updateHobbies() {
+    this.user = plainToClass(User, userJson);
+    this.userForm = this.formBuilder.formGroup(this.user) as RxFormGroup;
+  }
 }

@@ -22,6 +22,7 @@ export class HobbyFormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(this.hobbies)
   }
   addHobby() {
     this.hobbies.push(this.formBuilder.formGroup(Hobby));
@@ -35,6 +36,10 @@ export class HobbyFormComponent implements OnInit {
   submitForm() {
     console.log(this.userForm.value);
     this.updateHobbies.emit();
+  }
+
+  trackByFn(index, row) {
+    return index;
   }
 
 }
