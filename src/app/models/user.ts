@@ -3,22 +3,22 @@ import {
   propObject,
   required,
   alpha,
-  disable,
-  prop,
 } from '@rxweb/reactive-form-validators';
 import { Address } from './address';
 import { Hobby } from './hobby';
+
+import { Type } from 'class-transformer';
 export class User {
   @required()
   @alpha()
-  fullName: string|null =null
+  fullName: string|null =null;
 
   @propObject()
-  @required()
+  @Type(() => Address)
   address: Address|null = null;
 
   @propArray()
-  @required()
+  @Type(() => Hobby)
   hobbies: Array<Hobby>|null = null;
 
     public constructor(init?: Partial<User>) {
