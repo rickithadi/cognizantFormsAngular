@@ -29,4 +29,7 @@ export class RegisterFormComponent implements OnInit {
     this.user = plainToClass(User, userJson);
     this.userForm = this.formBuilder.formGroup(this.user) as RxFormGroup;
   }
+  submitForm():void{
+    console.log(this.userForm.value)
+  }
 }
