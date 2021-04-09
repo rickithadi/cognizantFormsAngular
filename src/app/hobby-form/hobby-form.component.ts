@@ -36,9 +36,4 @@ export class HobbyFormComponent implements OnInit {
     console.log(this.userForm.value);
     this.updateHobbies.emit();
   }
-
-  trackByFn(index, row) {
-    return index;
-  }
-
 }

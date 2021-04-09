@@ -22,7 +22,6 @@ export class RegisterFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.userForm.controls);
   }
 
   updateHobbies() {
@@ -30,7 +29,6 @@ export class RegisterFormComponent implements OnInit {
     this.userForm = this.formBuilder.formGroup(this.user) as RxFormGroup;
   }
   submitForm():void{
-    /*console.log(this.userForm.value)*/
     this.repo.addUser(this.userForm.value)
   }
 }

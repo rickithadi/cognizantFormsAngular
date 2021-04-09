@@ -13,4 +13,8 @@ describe('UserRepoService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('should init with empty array', () => {
+    expect(service.users).toBeTruthy();
+  });
+
 });
