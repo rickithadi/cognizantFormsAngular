@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegisterFormComponent } from './register-form.component';
+import { RxFormBuilder, RxFormGroup } from "@rxweb/reactive-form-validators";
 
 describe('RegisterFormComponent', () => {
   let component: RegisterFormComponent;
@@ -8,7 +9,8 @@ describe('RegisterFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RegisterFormComponent ]
+      declarations: [ RegisterFormComponent ],
+      providers: [ RxFormBuilder]
     })
     .compileComponents();
   });
@@ -22,4 +24,12 @@ describe('RegisterFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should init class from json file', () => {
+    expect(component.user).toBeTruthy();
+  });
+
+  it('should build form', () => {
+    expect(component.userForm).toBeTruthy();
+  });
+
 });
