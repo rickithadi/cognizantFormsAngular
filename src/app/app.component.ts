@@ -12,11 +12,6 @@ export class AppComponent {
     ReactiveFormConfig.set({
       validationMessage: {
         required: 'This field is required.',
-
-        minLength: 'Enter minimum of {{0}} characters.',
-
-        compare: 'The value should be matched with {{0}}.',
-
         alpha: 'you can only enter alphabets.',
       },
     });
