@@ -9,7 +9,7 @@
 
     <!--<div formArrayName="hobbies">-->
     <ul *ngFor="let hobby of hobbies.controls ; index as i">
-        <li>{{hobby.value.name}}<button class='btn btn-danger'> remove</button></li>
+        <li>{{hobby.value.name}}<button class='btn btn-danger' (click)='removeHobby(i)'> remove</button></li>
     </ul>
     <!--</div>-->
 </form>
